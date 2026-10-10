@@ -45,15 +45,10 @@ public final class SpaceBeaconItem extends Item {
                 serverPlayer.sendSystemMessage(Component.literal("Orbit dimension not loaded. Check server datapacks."));
                 return InteractionResultHolder.fail(stack);
             }
-            arrival = new BlockPos(0, 130, 0);
-            // The world is intentionally empty. Generate a simple, persistent arrival platform.
-            for (int x = -3; x <= 3; x++) {
-                for (int z = -3; z <= 3; z++) {
-                    BlockPos floor = new BlockPos(x, 128, z);
-                    if (destination.isEmptyBlock(floor)) {
-                        destination.setBlockAndUpdate(floor, Blocks.SMOOTH_STONE.defaultBlockState());
-                    }
-                }
+            arrival = new BlockPos(0, 129, 0);
+            if (!OrbitalStationBuilder.ensureStation(destination)) {
+                serverPlayer.sendSystemMessage(Component.literal("Orbit station footprint is occupied."));
+                return InteractionResultHolder.fail(stack);
             }
         }
         serverPlayer.teleportTo(destination, arrival.getX() + 0.5, arrival.getY(), arrival.getZ() + 0.5,
