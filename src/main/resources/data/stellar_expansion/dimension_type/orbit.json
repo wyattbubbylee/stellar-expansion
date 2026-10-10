@@ -1,0 +1,18 @@
+{
+  "fixed_time": 18000,
+  "has_skylight": false,
+  "has_ceiling": false,
+  "ultrawarm": false,
+  "natural": false,
+  "coordinate_scale": 1,
+  "bed_works": false,
+  "respawn_anchor_works": false,
+  "min_y": 0,
+  "height": 256,
+  "logical_height": 256,
+  "infiniburn": "#minecraft:infiniburn_end",
+  "effects": "minecraft:the_end",
+  "ambient_light": 0,
+  "monster_spawn_light_level": 0,
+  "monster_spawn_block_light_limit": 0
+}

@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="stellar_expansion"
+version="0.1.0-dev"
+displayName="Stellar Expansion"
+authors="Stellar Expansion contributors"
+description="Experimental orbital engineering and mini-sun prototype for Minecraft 1.21.1."
+
+[[dependencies.stellar_expansion]]
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.stellar_expansion]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+ordering="NONE"
+side="BOTH"

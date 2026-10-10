@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [" G ", "GEG", " G "],
+  "key": {
+    "G": "minecraft:glowstone",
+    "E": "minecraft:ender_eye"
+  },
+  "result": { "id": "stellar_expansion:mini_sun", "count": 1 }
+}

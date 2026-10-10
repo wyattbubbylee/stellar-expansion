@@ -1,0 +1,13 @@
+{
+  "type": "stellar_expansion:orbit",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:the_end",
+      "layers": [],
+      "features": false,
+      "lakes": false,
+      "structure_overrides": []
+    }
+  }
+}
