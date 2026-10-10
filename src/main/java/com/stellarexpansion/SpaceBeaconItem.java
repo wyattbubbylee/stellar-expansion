@@ -51,6 +51,8 @@ public final class SpaceBeaconItem extends Item {
                 return InteractionResultHolder.fail(stack);
             }
             OrbitalSunScene.ensureScene(destination);
+            OrbitalOrbitDecor.ensure(destination);
+            OrbitalObservationDeck.ensure(destination);
         }
         serverPlayer.teleportTo(destination, arrival.getX() + 0.5, arrival.getY(), arrival.getZ() + 0.5,
             serverPlayer.getYRot(), serverPlayer.getXRot());
