@@ -37,7 +37,7 @@ public final class OrbitalStationBuilder {
 
         BlockState hull = Blocks.POLISHED_DEEPSLATE.defaultBlockState();
         BlockState deck = Blocks.SMOOTH_QUARTZ.defaultBlockState();
-        BlockState window = Blocks.TINTED_GLASS.defaultBlockState();
+        BlockState window = Blocks.LIGHT_BLUE_STAINED_GLASS.defaultBlockState();
         BlockState light = Blocks.SEA_LANTERN.defaultBlockState();
         BlockState trim = Blocks.IRON_BLOCK.defaultBlockState();
 
@@ -57,6 +57,14 @@ public final class OrbitalStationBuilder {
             }
         }
 
+        // Exterior hull ribs give the station a recognizable sci-fi silhouette.
+        // These are part of first generation only; existing stations are never rebuilt.
+        for (int x = -8; x <= 8; x += 4) {
+            for (int y = DECK + 1; y <= DECK + 5; y++) {
+                level.setBlockAndUpdate(new BlockPos(x, y, -HALF_Z), trim);
+                level.setBlockAndUpdate(new BlockPos(x, y, HALF_Z), trim);
+            }
+        }
         // Frame + ceiling lighting. Interior corridor stays open for walking.
         for (int x = -8; x <= 8; x += 4) {
             level.setBlockAndUpdate(new BlockPos(x, DECK + 6, 0), light);
