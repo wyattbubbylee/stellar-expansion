@@ -31,7 +31,7 @@ public final class OrbitalObservationDeck {
         for (int x = -1; x <= 1; x++) {
             for (int y = Y + 1; y <= Y + 3; y++) {
                 BlockState state = level.getBlockState(new BlockPos(x, y, -7));
-                if (!state.is(Blocks.POLISHED_DEEPSLATE) && !state.is(Blocks.TINTED_GLASS)) return;
+                if (!state.is(Blocks.POLISHED_DEEPSLATE) && !state.is(Blocks.TINTED_GLASS) && !state.is(Blocks.LIGHT_BLUE_STAINED_GLASS)) return;
             }
         }
 
