@@ -50,8 +50,6 @@ public final class SpaceBeaconItem extends Item {
                 serverPlayer.sendSystemMessage(Component.literal("Orbit station footprint is occupied."));
                 return InteractionResultHolder.fail(stack);
             }
-            OrbitalSunScene.ensureScene(destination);
-            OrbitalOrbitDecor.ensure(destination);
             OrbitalObservationDeck.ensure(destination);
         }
         serverPlayer.teleportTo(destination, arrival.getX() + 0.5, arrival.getY(), arrival.getZ() + 0.5,
