@@ -14,5 +14,7 @@
   "effects": "minecraft:the_end",
   "ambient_light": 0,
   "monster_spawn_light_level": 0,
-  "monster_spawn_block_light_limit": 0
+  "monster_spawn_block_light_limit": 0,
+  "has_raids": false,
+  "piglin_safe": false
 }
