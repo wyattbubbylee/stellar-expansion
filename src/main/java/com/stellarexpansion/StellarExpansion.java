@@ -28,6 +28,9 @@ public class StellarExpansion {
     public static final DeferredItem<BlockItem> MINI_SUN_ITEM = ITEMS.register("mini_sun", () ->
         new BlockItem(MINI_SUN.get(), new Item.Properties()));
 
+    public static final DeferredItem<SpaceBeaconItem> SPACE_BEACON = ITEMS.register("space_beacon", () ->
+        new SpaceBeaconItem(new Item.Properties().stacksTo(1)));
+
     public StellarExpansion(IEventBus modBus) {
         BLOCKS.register(modBus);
         ITEMS.register(modBus);
