@@ -50,7 +50,7 @@ public final class OrbitalStationBuilder {
                     boolean edge = Math.abs(x) == HALF_X || Math.abs(z) == HALF_Z;
                     if (!edge) continue;
                     boolean panoramic = y >= DECK + 2 && y <= DECK + 4
-                            && Math.abs(x) < HALF_X - 2 && Math.abs(z) < HALF_Z - 2;
+                            && ((Math.abs(x) == HALF_X && Math.abs(z) <= 4)\n                                || (Math.abs(z) == HALF_Z && Math.abs(x) <= 7));
                     level.setBlockAndUpdate(new BlockPos(x, y, z), panoramic ? window : hull);
                 }
             }
