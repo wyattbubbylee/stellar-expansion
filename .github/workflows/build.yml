@@ -25,6 +25,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: success()
         with:
-          name: stellar-expansion-dev-jar
+          name: stellar-expansion-run-${{ github.run_number }}-${{ github.sha }}
           path: build/libs/*.jar
           if-no-files-found: error
